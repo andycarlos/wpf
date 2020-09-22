@@ -24,7 +24,8 @@ namespace wpf.Control
     class ConectionConstrol
     {
         HttpClient httpClient;
-        public string baseUrl = "http://www.qbonlineservices.com/"; //"https://localhost:44365/"; //"http://www.qbonlineservices.com/"; //"http://98.254.97.228/"; 
+        public string baseUrl = "http://www.qbonlineservices.com/"; 
+        //public string baseUrl = "https://localhost:44365/"; 
         string url = System.IO.Path.GetDirectoryName(Application.ResourceAssembly.Location);
         public Token token;
         private IMapper _mapper { get; set; }
