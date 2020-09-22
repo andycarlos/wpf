@@ -1,29 +1,45 @@
-﻿using Newtonsoft.Json;
+﻿using AutoMapper;
+using AutoMapper.Configuration;
+using Newtonsoft.Json;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Xml;
 using System.Xml.Serialization;
+using wpf.Mapper;
 using wpf.Models;
+
 
 namespace wpf.Control
 {
     class ConectionConstrol
     {
         HttpClient httpClient;
-        public string baseUrl =  "https://localhost:44365/"; //"http://98.254.97.228/"; 
+        public string baseUrl = "http://www.qbonlineservices.com/"; //"https://localhost:44365/"; //"http://www.qbonlineservices.com/"; //"http://98.254.97.228/"; 
         string url = System.IO.Path.GetDirectoryName(Application.ResourceAssembly.Location);
         public Token token;
+        private IMapper _mapper { get; set; }
+
         public ConectionConstrol()
         {
             httpClient = new HttpClient();
             httpClient.DefaultRequestHeaders.Accept.Add(
                             new MediaTypeWithQualityHeaderValue("application/json"));
+            
+            MapperConfigurationExpression mapperConfigurationExpression = new MapperConfigurationExpression();
+            mapperConfigurationExpression.AddProfile(typeof(GeneralProfile));
+            var configuration = new MapperConfiguration(mapperConfigurationExpression);
+            configuration.AssertConfigurationIsValid();
+            _mapper = configuration.CreateMapper();
         }
         public string login(string idConection, string Email, string Password)
         {
@@ -50,7 +66,7 @@ namespace wpf.Control
             }
             return apiResponse;
         }
-        public string RunQueryReturn(string result, string token, string funcion)
+        public async Task<string> RunQueryReturn(string result, string token, string funcion)
         {
             string payload;
             string apiResponse = String.Empty;
@@ -61,7 +77,17 @@ namespace wpf.Control
                         XmlSerializer serializer = new XmlSerializer(typeof(Models.Customer.QBXML), new XmlRootAttribute("QBXML"));
                         StringReader stringReader = new StringReader(result);
                         var ObjqBXML = (Models.Customer.QBXML)serializer.Deserialize(stringReader);
-                        var ObjqBXMLJson = JsonConvert.SerializeObject(ObjqBXML.QBXMLMsgsRs.CustomerQueryRs.CustomerRet);
+                        var dataObject = _mapper.Map<IQbCustomer[]>(ObjqBXML.QBXMLMsgsRs.CustomerQueryRs.CustomerRet);
+                        var ObjqBXMLJson = JsonConvert.SerializeObject(dataObject);
+                        payload = JsonConvert.SerializeObject(new { Body = ObjqBXMLJson, Token = token, Funcion = funcion });
+                        break;
+                    }
+                case "getAllVendors":
+                    {
+                        XmlSerializer serializer = new XmlSerializer(typeof(Models.Vendors.QBXML), new XmlRootAttribute("QBXML"));
+                        StringReader stringReader = new StringReader(result);
+                        var ObjqBXML = (Models.Vendors.QBXML)serializer.Deserialize(stringReader);
+                        var ObjqBXMLJson = JsonConvert.SerializeObject(ObjqBXML.QBXMLMsgsRs.VendorQueryRs.VendorRet.Where(x=>x.Email!=null));
                         payload = JsonConvert.SerializeObject(new { Body = ObjqBXMLJson, Token = token, Funcion = funcion });
                         break;
                     }
@@ -78,18 +104,9 @@ namespace wpf.Control
             HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
             using (var response = httpClient.PostAsync(baseUrl + "api/Qb/RequestReturn", c).Result)
             {
-                apiResponse = response.Content.ReadAsStringAsync().Result;
+                apiResponse = await response.Content.ReadAsStringAsync();
             }
             return apiResponse;
-
-            //string apiResponse = String.Empty;
-            //var payload = JsonConvert.SerializeObject(new { Body = result, Token = token });
-            //HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
-            //using (var response = httpClient.PostAsync(baseUrl + "api/Qb/RequestReturn", c).Result)
-            //{
-            //    apiResponse = response.Content.ReadAsStringAsync().Result;
-            //}
-            //return apiResponse;
         }
 
         public string AssamblyChequin()

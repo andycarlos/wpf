@@ -62,7 +62,7 @@ namespace wpf
             #endregion
 
             dispatcherTimer = new DispatcherTimer();
-            dispatcherTimer.Interval = new TimeSpan(0, 5, 0);
+            dispatcherTimer.Interval = new TimeSpan(0, 10, 0);
             dispatcherTimer.Tick += new EventHandler(DispatcherTimer_Tick);
             dispatcherTimer.Start();
 
@@ -71,10 +71,8 @@ namespace wpf
             userTextBox.Text = userPass.User;
             passwordUser.Password = userPass.Pass;
 
-
             conectionConstrol = new ConectionConstrol();
             conectionConstrol.AssamblyChequin();
-            date = DateTime.Now;
 
             HubConnection = new HubConnectionBuilder()
                 .WithUrl(conectionConstrol.baseUrl + "servicehub")
@@ -108,9 +106,7 @@ namespace wpf
 
                      try
                      {
-
                          response = rp.ProcessRequest(ticket, message);
-
                      }
                      catch (System.Runtime.InteropServices.COMException ex)
                      {
@@ -121,14 +117,14 @@ namespace wpf
                          string newString = sr.ReadToEnd() + Environment.NewLine + DateTime.Now + ": " + message;
                          sw.Write(newString);
                          sw.Flush(); //HERE
-                        fs.Close();
+                         fs.Close();
                          messagesList.Items.Insert(0, DateTime.Now.ToString() + " " + ex.Message);
                          return;
                      }
 
                      stop = new TimeSpan(DateTime.Now.Ticks);
                      messagesList.Items.Insert(0, DateTime.Now.ToString() + ": " + Math.Round(stop.Subtract(start).TotalMilliseconds));
-                     string dat = conectionConstrol.RunQueryReturn(response, token, funcion);
+                     string dat = conectionConstrol.RunQueryReturn(response, token, funcion).GetAwaiter().GetResult();
                      if (dat != "")
                          messagesList.Items.Insert(0, dat);
                      if (messagesList.Items.Count > 400)
@@ -154,14 +150,9 @@ namespace wpf
                 LoginButton();
         }
 
-        DateTime date;
         private void DispatcherTimer_Tick(object sender, EventArgs e)
         {
-            if (date.Day != DateTime.Now.Day)
-            {
-                date = DateTime.Now;
-                conectionConstrol.AssamblyChequin();
-            }
+            conectionConstrol.AssamblyChequin();
         }
 
         private void Login()

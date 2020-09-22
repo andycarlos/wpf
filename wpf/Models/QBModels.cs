@@ -2607,3 +2607,2080 @@ namespace wpf.Models.Customer
 
 
 }
+namespace wpf.Models.Vendors 
+{
+
+    // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+    public partial class QBXML
+    {
+
+        private QBXMLQBXMLMsgsRs qBXMLMsgsRsField;
+
+        /// <remarks/>
+        public QBXMLQBXMLMsgsRs QBXMLMsgsRs
+        {
+            get
+            {
+                return this.qBXMLMsgsRsField;
+            }
+            set
+            {
+                this.qBXMLMsgsRsField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRs
+    {
+
+        private QBXMLQBXMLMsgsRsVendorQueryRs vendorQueryRsField;
+
+        /// <remarks/>
+        public QBXMLQBXMLMsgsRsVendorQueryRs VendorQueryRs
+        {
+            get
+            {
+                return this.vendorQueryRsField;
+            }
+            set
+            {
+                this.vendorQueryRsField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRs
+    {
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRet[] vendorRetField;
+
+        private byte statusCodeField;
+
+        private string statusSeverityField;
+
+        private string statusMessageField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("VendorRet")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRet[] VendorRet
+        {
+            get
+            {
+                return this.vendorRetField;
+            }
+            set
+            {
+                this.vendorRetField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public byte statusCode
+        {
+            get
+            {
+                return this.statusCodeField;
+            }
+            set
+            {
+                this.statusCodeField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string statusSeverity
+        {
+            get
+            {
+                return this.statusSeverityField;
+            }
+            set
+            {
+                this.statusSeverityField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string statusMessage
+        {
+            get
+            {
+                return this.statusMessageField;
+            }
+            set
+            {
+                this.statusMessageField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRet
+    {
+
+        private string listIDField;
+
+        private System.DateTime timeCreatedField;
+
+        private System.DateTime timeModifiedField;
+
+        private string editSequenceField;
+
+        private string nameField;
+
+        private bool isActiveField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetClassRef[] classRefField;
+
+        private bool isTaxAgencyField;
+
+        private string companyNameField;
+
+        private string salutationField;
+
+        private string firstNameField;
+
+        private string middleNameField;
+
+        private string lastNameField;
+
+        private string jobTitleField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorAddress vendorAddressField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorAddressBlock vendorAddressBlockField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetShipAddress shipAddressField;
+
+        private string phoneField;
+
+        private string altPhoneField;
+
+        private string faxField;
+
+        private string emailField;
+
+        private string ccField;
+
+        private string contactField;
+
+        private string altContactField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetAdditionalContactRef[] additionalContactRefField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetContactsRet contactsRetField;
+
+        private string nameOnCheckField;
+
+        private string accountNumberField;
+
+        private string notesField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetAdditionalNotesRet[] additionalNotesRetField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorTypeRef[] vendorTypeRefField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTermsRef[] termsRefField;
+
+        private decimal creditLimitField;
+
+        private string vendorTaxIdentField;
+
+        private bool isVendorEligibleFor1099Field;
+
+        private decimal balanceField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetBillingRateRef[] billingRateRefField;
+
+        private string externalGUIDField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetSalesTaxCodeRef[] salesTaxCodeRefField;
+
+        private string salesTaxCountryField;
+
+        private bool isSalesTaxAgencyField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetSalesTaxReturnRef[] salesTaxReturnRefField;
+
+        private string taxRegistrationNumberField;
+
+        private string reportingPeriodField;
+
+        private bool isTaxTrackedOnPurchasesField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTaxOnPurchasesAccountRef[] taxOnPurchasesAccountRefField;
+
+        private bool isTaxTrackedOnSalesField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTaxOnSalesAccountRef[] taxOnSalesAccountRefField;
+
+        private bool isTaxOnTaxField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetPrefillAccountRef[] prefillAccountRefField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetCurrencyRef[] currencyRefField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetDataExtRet[] dataExtRetField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime TimeCreated
+        {
+            get
+            {
+                return this.timeCreatedField;
+            }
+            set
+            {
+                this.timeCreatedField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime TimeModified
+        {
+            get
+            {
+                return this.timeModifiedField;
+            }
+            set
+            {
+                this.timeModifiedField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string EditSequence
+        {
+            get
+            {
+                return this.editSequenceField;
+            }
+            set
+            {
+                this.editSequenceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Name
+        {
+            get
+            {
+                return this.nameField;
+            }
+            set
+            {
+                this.nameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsActive
+        {
+            get
+            {
+                return this.isActiveField;
+            }
+            set
+            {
+                this.isActiveField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("ClassRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetClassRef[] ClassRef
+        {
+            get
+            {
+                return this.classRefField;
+            }
+            set
+            {
+                this.classRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsTaxAgency
+        {
+            get
+            {
+                return this.isTaxAgencyField;
+            }
+            set
+            {
+                this.isTaxAgencyField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string CompanyName
+        {
+            get
+            {
+                return this.companyNameField;
+            }
+            set
+            {
+                this.companyNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Salutation
+        {
+            get
+            {
+                return this.salutationField;
+            }
+            set
+            {
+                this.salutationField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FirstName
+        {
+            get
+            {
+                return this.firstNameField;
+            }
+            set
+            {
+                this.firstNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string MiddleName
+        {
+            get
+            {
+                return this.middleNameField;
+            }
+            set
+            {
+                this.middleNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string LastName
+        {
+            get
+            {
+                return this.lastNameField;
+            }
+            set
+            {
+                this.lastNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string JobTitle
+        {
+            get
+            {
+                return this.jobTitleField;
+            }
+            set
+            {
+                this.jobTitleField = value;
+            }
+        }
+
+        /// <remarks/>
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorAddress VendorAddress
+        {
+            get
+            {
+                return this.vendorAddressField;
+            }
+            set
+            {
+                this.vendorAddressField = value;
+            }
+        }
+
+        /// <remarks/>
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorAddressBlock VendorAddressBlock
+        {
+            get
+            {
+                return this.vendorAddressBlockField;
+            }
+            set
+            {
+                this.vendorAddressBlockField = value;
+            }
+        }
+
+        /// <remarks/>
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetShipAddress ShipAddress
+        {
+            get
+            {
+                return this.shipAddressField;
+            }
+            set
+            {
+                this.shipAddressField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Phone
+        {
+            get
+            {
+                return this.phoneField;
+            }
+            set
+            {
+                this.phoneField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AltPhone
+        {
+            get
+            {
+                return this.altPhoneField;
+            }
+            set
+            {
+                this.altPhoneField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Fax
+        {
+            get
+            {
+                return this.faxField;
+            }
+            set
+            {
+                this.faxField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Email
+        {
+            get
+            {
+                return this.emailField;
+            }
+            set
+            {
+                this.emailField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Cc
+        {
+            get
+            {
+                return this.ccField;
+            }
+            set
+            {
+                this.ccField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Contact
+        {
+            get
+            {
+                return this.contactField;
+            }
+            set
+            {
+                this.contactField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AltContact
+        {
+            get
+            {
+                return this.altContactField;
+            }
+            set
+            {
+                this.altContactField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AdditionalContactRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetAdditionalContactRef[] AdditionalContactRef
+        {
+            get
+            {
+                return this.additionalContactRefField;
+            }
+            set
+            {
+                this.additionalContactRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetContactsRet ContactsRet
+        {
+            get
+            {
+                return this.contactsRetField;
+            }
+            set
+            {
+                this.contactsRetField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string NameOnCheck
+        {
+            get
+            {
+                return this.nameOnCheckField;
+            }
+            set
+            {
+                this.nameOnCheckField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string AccountNumber
+        {
+            get
+            {
+                return this.accountNumberField;
+            }
+            set
+            {
+                this.accountNumberField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Notes
+        {
+            get
+            {
+                return this.notesField;
+            }
+            set
+            {
+                this.notesField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AdditionalNotesRet")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetAdditionalNotesRet[] AdditionalNotesRet
+        {
+            get
+            {
+                return this.additionalNotesRetField;
+            }
+            set
+            {
+                this.additionalNotesRetField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("VendorTypeRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorTypeRef[] VendorTypeRef
+        {
+            get
+            {
+                return this.vendorTypeRefField;
+            }
+            set
+            {
+                this.vendorTypeRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("TermsRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTermsRef[] TermsRef
+        {
+            get
+            {
+                return this.termsRefField;
+            }
+            set
+            {
+                this.termsRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public decimal CreditLimit
+        {
+            get
+            {
+                return this.creditLimitField;
+            }
+            set
+            {
+                this.creditLimitField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string VendorTaxIdent
+        {
+            get
+            {
+                return this.vendorTaxIdentField;
+            }
+            set
+            {
+                this.vendorTaxIdentField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsVendorEligibleFor1099
+        {
+            get
+            {
+                return this.isVendorEligibleFor1099Field;
+            }
+            set
+            {
+                this.isVendorEligibleFor1099Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public decimal Balance
+        {
+            get
+            {
+                return this.balanceField;
+            }
+            set
+            {
+                this.balanceField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("BillingRateRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetBillingRateRef[] BillingRateRef
+        {
+            get
+            {
+                return this.billingRateRefField;
+            }
+            set
+            {
+                this.billingRateRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string ExternalGUID
+        {
+            get
+            {
+                return this.externalGUIDField;
+            }
+            set
+            {
+                this.externalGUIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("SalesTaxCodeRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetSalesTaxCodeRef[] SalesTaxCodeRef
+        {
+            get
+            {
+                return this.salesTaxCodeRefField;
+            }
+            set
+            {
+                this.salesTaxCodeRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string SalesTaxCountry
+        {
+            get
+            {
+                return this.salesTaxCountryField;
+            }
+            set
+            {
+                this.salesTaxCountryField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsSalesTaxAgency
+        {
+            get
+            {
+                return this.isSalesTaxAgencyField;
+            }
+            set
+            {
+                this.isSalesTaxAgencyField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("SalesTaxReturnRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetSalesTaxReturnRef[] SalesTaxReturnRef
+        {
+            get
+            {
+                return this.salesTaxReturnRefField;
+            }
+            set
+            {
+                this.salesTaxReturnRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string TaxRegistrationNumber
+        {
+            get
+            {
+                return this.taxRegistrationNumberField;
+            }
+            set
+            {
+                this.taxRegistrationNumberField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string ReportingPeriod
+        {
+            get
+            {
+                return this.reportingPeriodField;
+            }
+            set
+            {
+                this.reportingPeriodField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsTaxTrackedOnPurchases
+        {
+            get
+            {
+                return this.isTaxTrackedOnPurchasesField;
+            }
+            set
+            {
+                this.isTaxTrackedOnPurchasesField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("TaxOnPurchasesAccountRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTaxOnPurchasesAccountRef[] TaxOnPurchasesAccountRef
+        {
+            get
+            {
+                return this.taxOnPurchasesAccountRefField;
+            }
+            set
+            {
+                this.taxOnPurchasesAccountRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsTaxTrackedOnSales
+        {
+            get
+            {
+                return this.isTaxTrackedOnSalesField;
+            }
+            set
+            {
+                this.isTaxTrackedOnSalesField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("TaxOnSalesAccountRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTaxOnSalesAccountRef[] TaxOnSalesAccountRef
+        {
+            get
+            {
+                return this.taxOnSalesAccountRefField;
+            }
+            set
+            {
+                this.taxOnSalesAccountRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        public bool IsTaxOnTax
+        {
+            get
+            {
+                return this.isTaxOnTaxField;
+            }
+            set
+            {
+                this.isTaxOnTaxField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("PrefillAccountRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetPrefillAccountRef[] PrefillAccountRef
+        {
+            get
+            {
+                return this.prefillAccountRefField;
+            }
+            set
+            {
+                this.prefillAccountRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("CurrencyRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetCurrencyRef[] CurrencyRef
+        {
+            get
+            {
+                return this.currencyRefField;
+            }
+            set
+            {
+                this.currencyRefField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("DataExtRet")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetDataExtRet[] DataExtRet
+        {
+            get
+            {
+                return this.dataExtRetField;
+            }
+            set
+            {
+                this.dataExtRetField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetClassRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorAddress
+    {
+
+        private string addr1Field;
+
+        private string addr2Field;
+
+        private string addr3Field;
+
+        private string addr4Field;
+
+        private string addr5Field;
+
+        private string cityField;
+
+        private string stateField;
+
+        private string postalCodeField;
+
+        private string countryField;
+
+        private string noteField;
+
+        /// <remarks/>
+        public string Addr1
+        {
+            get
+            {
+                return this.addr1Field;
+            }
+            set
+            {
+                this.addr1Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr2
+        {
+            get
+            {
+                return this.addr2Field;
+            }
+            set
+            {
+                this.addr2Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr3
+        {
+            get
+            {
+                return this.addr3Field;
+            }
+            set
+            {
+                this.addr3Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr4
+        {
+            get
+            {
+                return this.addr4Field;
+            }
+            set
+            {
+                this.addr4Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr5
+        {
+            get
+            {
+                return this.addr5Field;
+            }
+            set
+            {
+                this.addr5Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string City
+        {
+            get
+            {
+                return this.cityField;
+            }
+            set
+            {
+                this.cityField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PostalCode
+        {
+            get
+            {
+                return this.postalCodeField;
+            }
+            set
+            {
+                this.postalCodeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Country
+        {
+            get
+            {
+                return this.countryField;
+            }
+            set
+            {
+                this.countryField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Note
+        {
+            get
+            {
+                return this.noteField;
+            }
+            set
+            {
+                this.noteField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorAddressBlock
+    {
+
+        private string addr1Field;
+
+        private string addr2Field;
+
+        private string addr3Field;
+
+        private string addr4Field;
+
+        private string addr5Field;
+
+        /// <remarks/>
+        public string Addr1
+        {
+            get
+            {
+                return this.addr1Field;
+            }
+            set
+            {
+                this.addr1Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr2
+        {
+            get
+            {
+                return this.addr2Field;
+            }
+            set
+            {
+                this.addr2Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr3
+        {
+            get
+            {
+                return this.addr3Field;
+            }
+            set
+            {
+                this.addr3Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr4
+        {
+            get
+            {
+                return this.addr4Field;
+            }
+            set
+            {
+                this.addr4Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr5
+        {
+            get
+            {
+                return this.addr5Field;
+            }
+            set
+            {
+                this.addr5Field = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetShipAddress
+    {
+
+        private string addr1Field;
+
+        private string addr2Field;
+
+        private string addr3Field;
+
+        private string addr4Field;
+
+        private string addr5Field;
+
+        private string cityField;
+
+        private string stateField;
+
+        private string postalCodeField;
+
+        private string countryField;
+
+        private string noteField;
+
+        /// <remarks/>
+        public string Addr1
+        {
+            get
+            {
+                return this.addr1Field;
+            }
+            set
+            {
+                this.addr1Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr2
+        {
+            get
+            {
+                return this.addr2Field;
+            }
+            set
+            {
+                this.addr2Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr3
+        {
+            get
+            {
+                return this.addr3Field;
+            }
+            set
+            {
+                this.addr3Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr4
+        {
+            get
+            {
+                return this.addr4Field;
+            }
+            set
+            {
+                this.addr4Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Addr5
+        {
+            get
+            {
+                return this.addr5Field;
+            }
+            set
+            {
+                this.addr5Field = value;
+            }
+        }
+
+        /// <remarks/>
+        public string City
+        {
+            get
+            {
+                return this.cityField;
+            }
+            set
+            {
+                this.cityField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string State
+        {
+            get
+            {
+                return this.stateField;
+            }
+            set
+            {
+                this.stateField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string PostalCode
+        {
+            get
+            {
+                return this.postalCodeField;
+            }
+            set
+            {
+                this.postalCodeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Country
+        {
+            get
+            {
+                return this.countryField;
+            }
+            set
+            {
+                this.countryField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Note
+        {
+            get
+            {
+                return this.noteField;
+            }
+            set
+            {
+                this.noteField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetAdditionalContactRef
+    {
+
+        private string contactNameField;
+
+        private string contactValueField;
+
+        /// <remarks/>
+        public string ContactName
+        {
+            get
+            {
+                return this.contactNameField;
+            }
+            set
+            {
+                this.contactNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string ContactValue
+        {
+            get
+            {
+                return this.contactValueField;
+            }
+            set
+            {
+                this.contactValueField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetContactsRet
+    {
+
+        private string listIDField;
+
+        private System.DateTime timeCreatedField;
+
+        private System.DateTime timeModifiedField;
+
+        private string editSequenceField;
+
+        private string contactField;
+
+        private string salutationField;
+
+        private string firstNameField;
+
+        private string middleNameField;
+
+        private string lastNameField;
+
+        private string jobTitleField;
+
+        private QBXMLQBXMLMsgsRsVendorQueryRsVendorRetContactsRetAdditionalContactRef[] additionalContactRefField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime TimeCreated
+        {
+            get
+            {
+                return this.timeCreatedField;
+            }
+            set
+            {
+                this.timeCreatedField = value;
+            }
+        }
+
+        /// <remarks/>
+        public System.DateTime TimeModified
+        {
+            get
+            {
+                return this.timeModifiedField;
+            }
+            set
+            {
+                this.timeModifiedField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string EditSequence
+        {
+            get
+            {
+                return this.editSequenceField;
+            }
+            set
+            {
+                this.editSequenceField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Contact
+        {
+            get
+            {
+                return this.contactField;
+            }
+            set
+            {
+                this.contactField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Salutation
+        {
+            get
+            {
+                return this.salutationField;
+            }
+            set
+            {
+                this.salutationField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FirstName
+        {
+            get
+            {
+                return this.firstNameField;
+            }
+            set
+            {
+                this.firstNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string MiddleName
+        {
+            get
+            {
+                return this.middleNameField;
+            }
+            set
+            {
+                this.middleNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string LastName
+        {
+            get
+            {
+                return this.lastNameField;
+            }
+            set
+            {
+                this.lastNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string JobTitle
+        {
+            get
+            {
+                return this.jobTitleField;
+            }
+            set
+            {
+                this.jobTitleField = value;
+            }
+        }
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("AdditionalContactRef")]
+        public QBXMLQBXMLMsgsRsVendorQueryRsVendorRetContactsRetAdditionalContactRef[] AdditionalContactRef
+        {
+            get
+            {
+                return this.additionalContactRefField;
+            }
+            set
+            {
+                this.additionalContactRefField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetContactsRetAdditionalContactRef
+    {
+
+        private string contactNameField;
+
+        private string contactValueField;
+
+        /// <remarks/>
+        public string ContactName
+        {
+            get
+            {
+                return this.contactNameField;
+            }
+            set
+            {
+                this.contactNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string ContactValue
+        {
+            get
+            {
+                return this.contactValueField;
+            }
+            set
+            {
+                this.contactValueField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetAdditionalNotesRet
+    {
+
+        private string noteIDField;
+
+        private string dateField;
+
+        private string noteField;
+
+        /// <remarks/>
+        public string NoteID
+        {
+            get
+            {
+                return this.noteIDField;
+            }
+            set
+            {
+                this.noteIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Date
+        {
+            get
+            {
+                return this.dateField;
+            }
+            set
+            {
+                this.dateField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string Note
+        {
+            get
+            {
+                return this.noteField;
+            }
+            set
+            {
+                this.noteField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetVendorTypeRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTermsRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetBillingRateRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetSalesTaxCodeRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetSalesTaxReturnRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTaxOnPurchasesAccountRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetTaxOnSalesAccountRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetPrefillAccountRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetCurrencyRef
+    {
+
+        private string listIDField;
+
+        private string fullNameField;
+
+        /// <remarks/>
+        public string ListID
+        {
+            get
+            {
+                return this.listIDField;
+            }
+            set
+            {
+                this.listIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string FullName
+        {
+            get
+            {
+                return this.fullNameField;
+            }
+            set
+            {
+                this.fullNameField = value;
+            }
+        }
+    }
+
+    /// <remarks/>
+    [System.SerializableAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class QBXMLQBXMLMsgsRsVendorQueryRsVendorRetDataExtRet
+    {
+
+        private string ownerIDField;
+
+        private string dataExtNameField;
+
+        private string dataExtTypeField;
+
+        private string dataExtValueField;
+
+        /// <remarks/>
+        public string OwnerID
+        {
+            get
+            {
+                return this.ownerIDField;
+            }
+            set
+            {
+                this.ownerIDField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DataExtName
+        {
+            get
+            {
+                return this.dataExtNameField;
+            }
+            set
+            {
+                this.dataExtNameField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DataExtType
+        {
+            get
+            {
+                return this.dataExtTypeField;
+            }
+            set
+            {
+                this.dataExtTypeField = value;
+            }
+        }
+
+        /// <remarks/>
+        public string DataExtValue
+        {
+            get
+            {
+                return this.dataExtValueField;
+            }
+            set
+            {
+                this.dataExtValueField = value;
+            }
+        }
+    }
+
+
+
+}
